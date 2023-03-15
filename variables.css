@@ -1,0 +1,34 @@
+:root {
+  --size: 16px;
+  --font-size: var(--size);
+  --ani-duration: 0.18s;
+  --color-prim-h: 215;
+  --color-prim-s: 77%;
+  --color-prim-l: 46%;
+  --color-prim-base: var(--color-prim-h), var(--color-prim-s), var(--color-prim-l);
+  --color-prim: hsl(var(--color-prim-h), var(--color-prim-s), var(--color-prim-l));
+  --color-fore-h: 0;
+  --color-fore-s: 0%;
+  --color-fore-l: 0%;
+  --color-fore-base: var(--color-fore-h), var(--color-fore-s), var(--color-fore-l);
+  --color-fore: hsl(var(--color-fore-h), var(--color-fore-s), var(--color-fore-l));
+  --color-back-h: 0;
+  --color-back-s: 0%;
+  --color-back-l: 100%;
+  --color-back-base: var(--color-back-h), var(--color-back-s), var(--color-back-l);
+  --color-back: hsl(var(--color-back-h), var(--color-back-s), var(--color-back-l));
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fore-h: 0;
+    --color-fore-s: 0%;
+    --color-fore-l: 100%;
+    --color-fore-base: var(--color-fore-h), var(--color-fore-s), var(--color-fore-l);
+    --color-fore: hsl(var(--color-fore-h), var(--color-fore-s), var(--color-fore-l));
+    --color-back-h: 0;
+    --color-back-s: 0%;
+    --color-back-l: 0%;
+    --color-back-base: var(--color-back-h), var(--color-back-s), var(--color-back-l);
+    --color-back: hsl(var(--color-back-h), var(--color-back-s), var(--color-back-l));
+  }
+}

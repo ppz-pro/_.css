@@ -1,0 +1,63 @@
+HSL(h, s, l, alpha = undefined)
+  if alpha is undefined
+    s('hsl(%s, %s, %s)', h, s, l)
+  else
+    s('hsla(%s, %s, %s, %s)', h, s, l, a)
+
+Color(name, alpha = undefined)
+  if alpha is undefined
+    s('hsl(var(--color-%s-base))', name)
+  else
+    s('hsla(var(--color-%s-base), %s)', name, alpha)
+
+ColorFore(alpha = undefined)
+  Color(fore, alpha)
+ColorBack(alpha = undefined)
+  Color(back, alpha)
+ColorPrim(alpha = undefined)
+  Color(prim, alpha)
+
+ColorVariable(name, h, s, l)
+  --color-{name}-h: h
+  --color-{name}-s: s
+  --color-{name}-l: l
+  --color-{name}-base: s("var(--color-%s-h), var(--color-%s-s), var(--color-%s-l)", name, name, name)
+  --color-{name}: s("hsl(var(--color-%s-h), var(--color-%s-s), var(--color-%s-l))", name, name, name)
+
+Size(radio = undefined)
+  if radio is undefined
+    var(--size)
+  else
+    calc(var(--size) * radio)
+
+Before()
+  &::before
+    content: ''
+    display: block
+    {block}
+After()
+  &::after
+    content: ''
+    display: block
+    {block}
+
+AlignItemsCenter()
+  display: flex
+  align-items: center
+AlignItemsCenterY()
+  AlignItemsCenter()
+  flex-direction: column
+
+VW100()
+  margin-left: calc(50% - 50vw)
+  margin-right: calc(50% - 50vw)
+
+TST(dur = var(--ani-duration))
+  transition: all dur
+
+Reset()
+  outline: none
+  border: none
+  background: transparent
+  padding: 0
+  margin: 0

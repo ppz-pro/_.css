@@ -1,0 +1,9 @@
+RSize($size)
+  s("calc(var(--toft-ratio) * %s)", $size)
+
+RSizeP($percentage)
+  s("calc(var(--toft-size) * %s)", $percentage)
+
+div
+  width: RSize(100)
+  height: RSizeP(.3)

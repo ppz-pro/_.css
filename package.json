@@ -1,0 +1,22 @@
+{
+  "name": "toft",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.styl",
+  "scripts": {
+    "watch-build": "stylus --watch variables.styl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppz-pro/_.css.git"
+  },
+  "author": "gy0318",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ppz-pro/_.css/issues"
+  },
+  "homepage": "https://github.com/ppz-pro/_.css#readme",
+  "devDependencies": {
+    "stylus": "^0.59.0"
+  }
+}

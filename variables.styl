@@ -1,0 +1,14 @@
+@import './'
+
+:root
+  --size: 16px
+  --font-size: var(--size)
+  --ani-duration: .18s
+
+  ColorVariable(prim, 215, 77%, 46%)
+  ColorVariable(fore, 0, 0%, 0%)
+  ColorVariable(back, 0, 0%, 100%)
+@media (prefers-color-scheme: dark)
+  :root
+    ColorVariable(fore, 0, 0%, 100%)
+    ColorVariable(back, 0, 0%, 0%)
