@@ -48,14 +48,17 @@ AlignItemsCenterY()
   AlignItemsCenter()
   flex-direction: column
 
-VW100()
+VW100(padding = true)
   margin-left: calc(50% - 50vw)
   margin-right: calc(50% - 50vw)
+  if padding
+    padding-left: calc(50vw - 50%)
+    padding-right: calc(50vw - 50%)
 
 TST(dur = var(--ani-duration))
   transition: all dur
 
-Reset()
+Reset() // for button, input
   outline: none
   border: none
   background: transparent
