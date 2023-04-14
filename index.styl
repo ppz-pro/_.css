@@ -24,6 +24,11 @@ ColorVariable(name, h, s, l)
   --color-{name}-base: s("var(--color-%s-h), var(--color-%s-s), var(--color-%s-l)", name, name, name)
   --color-{name}: s("hsl(var(--color-%s-h), var(--color-%s-s), var(--color-%s-l))", name, name, name)
 
+White(alpha = 1)
+  rgba(255, 255, 255, alpha)
+Black(alpha = 1)
+  rgba(0, 0, 0, alpha)
+
 Size(radio = undefined)
   if radio is undefined
     var(--size)
